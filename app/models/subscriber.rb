@@ -1,7 +1,7 @@
 class Subscriber < ActiveRecord::Base
-  has_and_belongs_to_many :tags
+  has_many :tags, through: :favorites
 
   devise :database_authenticatable, :registerable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :lockable, :confirmable
+         :lockable#, :confirmable
 end
