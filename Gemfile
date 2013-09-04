@@ -15,7 +15,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'textacular', '~> 3.0'
 gem 'twilio-ruby'
-gem 'unicorn'
+
 
 # For Background Queuing and Resque
 gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'

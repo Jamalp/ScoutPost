@@ -9,7 +9,7 @@ class ScrapeRecent
 
       if Post.where(hn_post_id: post.id).first
       	break
-      else 
+      else
       	puts "#{post.link.title}, #{post.id}"
 	      post_data = { title: post.link.title,
 	                    href: post.link.href,
