@@ -20,7 +20,7 @@ namespace :hn_rake do
                     # user: post.user.name,
                     comments_count: post.comments_count,
                     hn_post_id: post.id,
-                    submission: post.time
+                    # submission: post.time
                   }
       post = Post.create(post_data)
     end
