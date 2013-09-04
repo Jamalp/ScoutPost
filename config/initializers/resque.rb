@@ -1,3 +1,8 @@
-$redis = Redis.new(host: ENV["REDISCLOUD_URL"] || 'localhost:6379')
+if ENV["REDISCLOUD_URL"]
+	uri = URI.parse(ENV["REDISCLOUD_URL"])
+	$redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+else 
+	$redis = Redis.new(host: 'localhost')
+end
+
 Resque.redis = $redis
-# We'll set config parameters on Redis soon
