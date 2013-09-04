@@ -3,5 +3,5 @@ class Subscriber < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :lockable, :confirmable
+         :lockable#, :confirmable
 end

@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class = "navbar-fix">
+    <ul id = "nav">
+      <li id = "navlink"><a href="/">Home</a></li>
+      <li id = "navlink"><a href="/subscribers/sign_in">Login</a></li>
+      <%= link_to "Login in with GitHub", user_omniauth_authorize_path(:github) %>
+      <li id = "navlink"><a href="/subscribers/sign_up">Sign Up</a></li>
+      <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
+    </ul>
+  </div>
 
 <%= yield %>
   <p class="notice"><%= notice %></p>
