@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem 'rails_12factor' # For Heroku
 gem 'mechanize'
 gem 'nokogiri'
 gem 'pry-rails'
@@ -13,8 +15,15 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'textacular', '~> 3.0'
 gem 'twilio-ruby'
+gem 'unicorn'
+
+# For Background Queuing and Resque
+gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
+gem 'redis'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
