@@ -4,5 +4,5 @@
   <%= "#{favorite.tag.name}: " %>
   <%= "score threshold of #{favorite.score_threshold}" %>
   <%= link_to 'Edit', [:edit, favorite] %>
-  <%= link_to 'Destroy', favorite, :method => :delete, :confirm => "Are you sure?" %><br />
+  <%= link_to 'Destroy', favorite, method: :delete, confirm: "Are you sure?" %><br />
 <% end %>
