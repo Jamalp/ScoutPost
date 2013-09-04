@@ -8,7 +8,8 @@ class FavoritesController < ApplicationController
   end
 
   def new
-    @favorite = Favorite.new
+    @current_tags = Tag.all
+    @new_favorite = Favorite.new
     # Do we use Tag.new if it's a find_or_create_by situation?
   end
 
