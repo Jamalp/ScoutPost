@@ -1,6 +1,8 @@
 ScoutPost::Application.routes.draw do
   devise_for :subscribers
-  root :to => "scoutpost#index"
+  root :to => "main#home"
+  get '/about' => 'main#about'
+  get '/subscriber/digest' => 'subscriber#digest'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
