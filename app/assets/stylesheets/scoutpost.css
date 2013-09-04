@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Armata|Monda);
+
 body {
   position: relative;
   margin: 0;
@@ -6,8 +8,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.231;
-  background: url();
-  background-color: #ffffff;
+  /*background: url();*/
+  background-color: #E9E9E9;
 }
 
 div {
@@ -106,8 +108,8 @@ body > .post_wrapper {
 
 p {
   font-size: 18px;
-  color: #EBE8E3;
-  font-family: 'Monda';
+  color: #B4B3B1;
+  font-family: 'Monda', sans-serif;
   margin-left: -1px;
 }
 
@@ -143,7 +145,7 @@ textarea {
 h1,
 .h1 {
   font-size: 62px;
-  font-family: "Monda";
+  font-family: "Monda", sans-serif;
   font-weight: bold;
 }
 h2,

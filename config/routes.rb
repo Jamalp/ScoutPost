@@ -1,5 +1,6 @@
 ScoutPost::Application.routes.draw do
   devise_for :subscribers
+
   root :to => "main#home"
   get '/about' => 'main#about'
   get '/subscriber/digest' => 'subscriber#digest'
