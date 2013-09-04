@@ -15,6 +15,8 @@ gem 'textacular', '~> 3.0'
 gem 'twilio-ruby'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem "resque", "~> 2.0.0", github: "resque/resque"
+gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
