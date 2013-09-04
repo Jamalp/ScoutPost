@@ -13,6 +13,11 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'textacular', '~> 3.0'
 gem 'twilio-ruby'
+
+
+# For Background Queuing and Resque
+gem "resque", "~> 2.0.0", github: "resque/resque"
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
