@@ -225,6 +225,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.0.0)
   rails_12factor
+  redis
   resque (~> 2.0.0.pre.1)!
   ruby-hackernews
   sass-rails (~> 4.0.0)
