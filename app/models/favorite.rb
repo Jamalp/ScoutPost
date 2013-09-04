@@ -1,4 +1,4 @@
 class Favorite < ActiveRecord::Base
-  belongs_to :subscribers
-  belongs_to :tags
+  belongs_to :subscriber
+  belongs_to :tag
 end

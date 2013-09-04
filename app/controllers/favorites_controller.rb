@@ -1,8 +1,10 @@
 class FavoritesController < ApplicationController
   def index
     if subscriber_signed_in?
-      @something = current_subscriber
-      binding.pry
+      # binding.pry
+      @favorites = Favorite.where(subscriber_id: current_subscriber.id)
+      @favorite_tags = @favorites.pluck(:tag_id)
+      @tags = current_subscriber.tags
     end
     # show all of a single subscriber's tags
   end
