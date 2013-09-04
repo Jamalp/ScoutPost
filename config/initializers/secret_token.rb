@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ScoutPost::Application.config.secret_key_base = '691385d78f527df212ad114b832a6b6c69f31e32430ece4b20b15e3fd223e384a3a809f6a8bccd93719f93fa8d17ea68bc1d27777411363ab3899275e37c36ed'
+ScoutPost::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
