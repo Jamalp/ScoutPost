@@ -4,7 +4,7 @@ ScoutPost::Application.routes.draw do
   root :to => "main#home"
   get '/about' => 'main#about'
   get '/subscriber/digest' => 'subscriber#digest'
-
+  resources :tags
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

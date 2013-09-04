@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130904153216) do
+ActiveRecord::Schema.define(version: 20130904183836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130904153216) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "href"
+    t.text     "href"
     t.integer  "score"
     t.string   "user"
     t.string   "user_href"
@@ -54,10 +54,6 @@ ActiveRecord::Schema.define(version: 20130904153216) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
     t.integer  "failed_attempts",        default: 0
     t.string   "unlock_token"
     t.datetime "locked_at"
