@@ -12,6 +12,7 @@ gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'textacular', '~> 3.0'
+gem 'twilio-ruby'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
