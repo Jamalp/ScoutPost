@@ -1,7 +1,8 @@
-<% @favorites.each do |favorite| %>
-  <%= favorite.tag_id %>
-<% end %>
+<h3>Your Favorited Subjects</h3>
 
-<% @tags.each do |tag| %>
-  <%= tag.name %>
+<% @favorites.each do |favorite| %>
+  <%= "#{favorite.tag.name}: " %>
+  <%= "score threshold of #{favorite.score_threshold}" %>
+  <%= link_to("Click to change", "/favorites/#{favorite.id}/edit")%>
+  <%= link_to("Click to remove", "/favorites/#{favorite.id}/destroy")%><br />
 <% end %>
