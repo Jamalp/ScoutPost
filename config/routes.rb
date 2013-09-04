@@ -1,6 +1,10 @@
 ScoutPost::Application.routes.draw do
   devise_for :subscribers
+<<<<<<< HEAD
   root :to => "scoutpost#main"
+=======
+  root "scoutpost#index"
+>>>>>>> f4da65b5312d5857cb60b4dfb562197d40f61f09
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
