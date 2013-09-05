@@ -11,15 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130904153216) do
+ActiveRecord::Schema.define(version: 20130904183836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "favorites", force: true do |t|
+    t.integer "subscriber_id"
+    t.integer "tag_id"
+    t.integer "score_threshold", default: 80
+  end
+
+  add_index "favorites", ["subscriber_id", "tag_id"], name: "index_favorites_on_subscriber_id_and_tag_id", unique: true, using: :btree
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "href"
+    t.text     "href"
     t.integer  "score"
     t.string   "user"
     t.string   "user_href"
@@ -74,13 +82,5 @@ ActiveRecord::Schema.define(version: 20130904153216) do
 
   add_index "tags", ["id"], name: "index_tags_on_id", using: :btree
   add_index "tags", ["name"], name: "index_tags_on_name", using: :btree
-
-  create_table "tags_subscribers", force: true do |t|
-    t.integer "tag_id"
-    t.integer "subscriber_id"
-    t.integer "score_threshold", default: 80
-  end
-
-  add_index "tags_subscribers", ["tag_id", "subscriber_id"], name: "index_tags_subscribers_on_tag_id_and_subscriber_id", unique: true, using: :btree
 
 end

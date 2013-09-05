@@ -1,4 +1,4 @@
-class TagsController < ApplicationController
+class FavoritesController < ApplicationController
   def index
     if subscriber_signed_in?
       @something = current_subscriber

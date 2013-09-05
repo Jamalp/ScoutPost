@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+tags = ['Ruby', 'Rails', 'Javascript', 'Apple', 'Google', 'Android']
+
+tags.each do |tag|
+  Tag.find_or_create_by_name(tag)
+end
