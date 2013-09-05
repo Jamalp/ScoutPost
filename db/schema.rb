@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20130905204442) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "phone"
   end
 
   add_index "subscribers", ["email"], name: "index_subscribers_on_email", unique: true, using: :btree
