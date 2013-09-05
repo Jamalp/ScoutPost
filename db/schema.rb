@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20130905180011) do
 
   # These are extensions that must be enabled in order to support this database
@@ -41,6 +42,13 @@ ActiveRecord::Schema.define(version: 20130905180011) do
   add_index "posts", ["created_at"], name: "index_posts_on_created_at", using: :btree
   add_index "posts", ["id"], name: "index_posts_on_id", using: :btree
   add_index "posts", ["updated_at"], name: "index_posts_on_updated_at", using: :btree
+
+  create_table "posts_subscribers", force: true do |t|
+    t.integer "post_id"
+    t.integer "subscriber_id"
+  end
+
+  add_index "posts_subscribers", ["post_id", "subscriber_id"], name: "index_posts_subscribers_on_post_id_and_subscriber_id", unique: true, using: :btree
 
   create_table "posts_tags", force: true do |t|
     t.integer "post_id"

@@ -1,4 +1,5 @@
 class SubscriberController < ApplicationController
+  before_filter :authenticate_subscriber!
 
   def new
     @subscriber = Subscriber.new

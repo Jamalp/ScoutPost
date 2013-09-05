@@ -10,7 +10,7 @@ gem 'sendgrid'
 gem 'ruby-hackernews'
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'dotenv-rails'
-gem 'omniauth'
+
 gem 'omniauth-github'
 gem 'textacular', '~> 3.0', require: 'textacular/rails'
 gem 'twilio-ruby'

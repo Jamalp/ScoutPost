@@ -259,7 +259,6 @@ DEPENDENCIES
   mechanize
   meta_request
   nokogiri
-  omniauth
   omniauth-github
   pg
   pry-debugger
