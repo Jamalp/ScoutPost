@@ -20,7 +20,7 @@ div {
   color: inherit;
 }
 
-body > .post_wrapper {
+body > .wrapper {
   padding-left: 100px;
   margin-top: 5%;
   margin-left: auto;
@@ -103,7 +103,7 @@ li#navlink {
 }
 
 /*POSTS STYLING*/
-.post_wrapper > .post {
+.wrapper > .post {
   position: relative;
   float: left;
   width: 325px;
