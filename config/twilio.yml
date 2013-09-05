@@ -1,0 +1,4 @@
+development:
+  from: '+1 302-482-8869'
+  sid: ENV['TWILIO_ACCOUNT_SID']
+  token: ENV['TWILIO_AUTH_TOKEN']
