@@ -18,8 +18,8 @@ class ScrapeRecent
 	                    hn_post_id: post.id,
                       submission: post.time
 	                  }
-	      post = Post.create(post_data)
-        Resque.enqueue(TagSinglePost, post.id)
+	      new_post = Post.create(post_data)
+        Resque.enqueue(TagSinglePost, new_post.id)
 	    end
     end
   end
