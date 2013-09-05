@@ -9,6 +9,19 @@ class Subscriber < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :lockable, :omniauthable, :omniauth_providers => [:github]
 
+  private
+
+  def send_first_text
+      # Instantiate a Twilio client
+      client = Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
+      # Create and send an SMS message
+      client.account.sms.messages.create(
+        from: TWILIO_CONFIG['from'],
+        to: self.phone,
+        body: "Thanks for signing up. You will recieve periodic message as your favorite posts appear!"
+      )
+  end
+
   def self.find_for_github_oauth(auth, signed_in_resource=nil)
     subscriber = Subscriber.where(:provider => auth.provider, :uid => auth.uid).first
     unless subscriber
@@ -31,20 +44,4 @@ class Subscriber < ActiveRecord::Base
       end
     end
   end
-
-
-  private
-
-  def send_first_text
-      # Instantiate a Twilio client
-      client = Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
-      # Create and send an SMS message
-      client.account.sms.messages.create(
-        from: TWILIO_CONFIG['from'],
-        to: self.phone,
-        body: "Thanks for signing up. You will recieve periodic message as your favorite posts appear!"
-      )
-  end
-
-
 end
