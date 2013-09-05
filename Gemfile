@@ -9,7 +9,7 @@ gem 'nokogiri'
 gem 'pry-rails'
 gem 'sendgrid'
 gem 'ruby-hackernews'
-gem 'devise'
+gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'dotenv-rails'
 
 gem 'omniauth-github'

@@ -8,6 +8,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "TeamScoutPost@gmail.com"
+  config.secret_key = '814c539bc0397b98761888f3966adafa868f6fde6e737a121450af62dc925abde617a44068539ed852e13affd1fa5705d85027dab6a014f43cf844cd61962b07'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
