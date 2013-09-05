@@ -219,7 +219,6 @@ DEPENDENCIES
   jquery-rails
   mechanize
   nokogiri
-  omniauth
   omniauth-github
   pg
   pry-rails

@@ -9,16 +9,18 @@
 <body>
   <div class = "navbar-fix">
     <ul id = "nav">
-      <li id = "navlink"><a href="/">Home</a></li>
-      <li id = "navlink"><a href="/subscribers/sign_in">Login</a></li>
-      <li id = "navlink"><a href="/subscribers/sign_up">Sign Up</a></li>
+      <li id = "navlink"><%= link_to "Home", root_path %></li>
+      <li id = "navlink"><%= render 'devise/menu/session_items' %></li>
+      <li id = "navlink"><%= render 'devise/menu/registration_items' %></li>
+      <!-- Make this only when user is signed in -->
       <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
     </ul>
   </div>
-
-<%= yield %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
+<%= yield %>
+
 
 </body>
 </html>

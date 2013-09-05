@@ -79,5 +79,5 @@ ScoutPost::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
    # Required for Devise
-  config.action_mailer.default_url_options = { :host => 'http://example.com' }
+  config.action_mailer.default_url_options = { :host => 'scoutpost.herokuapp.com' }
 end

@@ -4,6 +4,7 @@
 
   <h1>HACKER NEWS </h1>
   <p> Hacker news. Hacker News</p>
-  <a href="#">Link Link Link</a>
+  <%= link_to "SIGN IN WITH GITHUB", subscriber_omniauth_authorize_path(:github) %>
+  <%= link_to('Logout', destroy_subscriber_session_path, :method => :delete) %>
   </div>
 </div>
