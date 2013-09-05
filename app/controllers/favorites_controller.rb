@@ -8,13 +8,17 @@ class FavoritesController < ApplicationController
   end
 
   def new
-    @current_tags = Tag.all
-    @new_favorite = Favorite.new
+    @favorite = Favorite.new
+    @tag = Tag.new
     # Do we use Tag.new if it's a find_or_create_by situation?
   end
 
   def create
-    # Tag.find_or_create_by
+    if subscriber_signed_in?
+      @tag = Tag.find_or_create_by(name: (params[:favorite][:tag][:name]))
+      @favorite = Favorite.create(subscriber_id: current_subscriber.id, tag_id: @tag.id, score_threshold: params[:favorite][:score_threshold])
+    end
+    redirect_to "/favorites"
     # Subscriber
   end
 
