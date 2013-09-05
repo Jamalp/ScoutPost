@@ -18,6 +18,7 @@ class ScrapeRecent
 	                    hn_post_id: post.id
 	                  }
 	      post = Post.create(post_data)
+        Resque.enqueue(TagSinglePost(post.id))
 	    end
     end
   end

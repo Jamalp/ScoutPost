@@ -13,7 +13,7 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-github'
-gem 'textacular', '~> 3.0'
+gem 'textacular', '~> 3.0', require: 'textacular/rails'
 gem 'twilio-ruby'
 
 
