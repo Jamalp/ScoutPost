@@ -5,6 +5,4 @@ class Subscriber < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :lockable#, :confirmable
 
-
-  include TwilioClient
 end

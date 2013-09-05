@@ -13,6 +13,8 @@
       <li id = "navlink"><a href="/subscribers/sign_in">Login</a></li>
       <li id = "navlink"><a href="/subscribers/sign_up">Sign Up</a></li>
       <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
+      <li><%= link_to('Logout', destroy_subscriber_session_path, :method => :delete) %></li>
+
     </ul>
   </div>
 
