@@ -1,14 +1,16 @@
+require 'omniauth'
+require 'omniauth-github'
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
-
+  config.mailer_sender = "TeamScoutPost@gmail.com"
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
-
+config.secret_key = '8c7fcd9d835d3e7eba51ba6eb79871ed1b2469a954204ffe1326742941076742291331981d9026e7983bf51155aeeac480a0b79050ba0e252289fad1cba70b2d'
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
@@ -225,7 +227,10 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'],
+    {
+      scope: "user:email"
+    }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

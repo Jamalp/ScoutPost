@@ -1,7 +1,7 @@
 ScoutPost::Application.routes.draw do
-  devise_for :subscribers
 
   root :to => "main#home"
+  devise_for :subscribers, :controllers => { :omniauth_callbacks => "subscribers/omniauth_callbacks" }
   get '/about' => 'main#about'
   get '/subscriber/digest' => 'subscriber#digest'
   resources :favorites

@@ -1,0 +1,10 @@
+<h3>Your Favorited Subjects</h3>
+
+<% @favorites.each do |favorite| %>
+  <%= "#{favorite.tag.name}: " %>
+  <%= "score threshold of #{favorite.score_threshold}" %>
+  <%= link_to 'Edit', [:edit, favorite] %>
+  <%= link_to 'Destroy', favorite, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+<% end %>
+
+<%= link_to("Add a new favorite", "/favorites/new")%>

@@ -165,7 +165,7 @@ p#data {
 }
 
 a {
-  color: #FF8000;
+  color: #72C4C0;
   text-decoration: none;
   -webkit-transition: 0.25s;
   -moz-transition: 0.25s;
@@ -187,10 +187,13 @@ textarea {
   font-size: 14px;
 }
 
+input#subscriber {
+  line-height: 1.3em;
+}
+
 h1,
 .h1 {
   font-size: 62px;
-  font-family: "Monda", sans-serif;
   font-weight: bold;
 }
 h2,
@@ -225,6 +228,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  line-height: 1.2em;
+  line-height: 1.7em;
   color: #575757;
+  font-family: "Monda", sans-serif;
 }
