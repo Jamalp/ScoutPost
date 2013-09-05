@@ -1,17 +1,18 @@
+# Queue up with Resque.enqueue(SendSms, "617-697-5208", "Sup")
+# test in the rails console with SendSms.perform("617-697-5208", "testing")
+
 class SendSms
   @queue = :default
 
-  def self.perform(post_id)
-    post = Post.find(post_id)
-    favorites = Favorite.all
-    favorites.each do |favorite|
-      if post.score >= favorite.score_threshold
-        puts 'hi'
-      else
-        puts "Construct additional pylons"
-      end
-    end
+  def self.perform(phone_number, text_message)
+    # Instantiate a Twilio client
+    client = Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
+    # Create and send an SMS message
+    client.account.sms.messages.create(
+      from: TWILIO_CONFIG['from'],
+      to: phone_number,
+      body: text_message
+    )
   end
 end
 
-# current_subscriber.id == favorite.subscriber_id &&
