@@ -1,4 +1,5 @@
 class Subscriber < ActiveRecord::Base
+  has_many :favorites
   has_many :tags, through: :favorites
 
   devise :database_authenticatable, :registerable, :lockable,

@@ -15,9 +15,11 @@ class ScrapeRecent
 	                    href: post.link.href,
 	                    score: post.voting.score,
 	                    comments_count: post.comments_count,
-	                    hn_post_id: post.id
+	                    hn_post_id: post.id,
+                      submission: post.time
 	                  }
 	      post = Post.create(post_data)
+        Resque.enqueue(TagSinglePost, post.id)
 	    end
     end
   end

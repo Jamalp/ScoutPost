@@ -1,0 +1,12 @@
+<h3>Edit favorite</h3>
+<p>Change the score threshold for this term</p>
+
+<%= form_for @favorite do |f| %>
+  <%= f.label :name %>:
+  <%= @favorite.tag.name %><br/>
+  <%= f.label :score_threshold %>
+  <%= f.number_field(:score_threshold, value: @favorite.score_threshold, in: 1..1000) %><br/>
+  <%= f.submit "Update" %>
+<% end %>
+
+<%= link_to("Back to favorites", "/favorites")%>

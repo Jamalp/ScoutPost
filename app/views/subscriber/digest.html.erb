@@ -1,95 +1,17 @@
 <div class= "post_wrapper">
 
   <!-- Begin Post -->
+  <% @post.each do |post| %>
   <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
+    <p id="title"><%= post.title %></p>
+    <div id="post_content"><%= %></div>
     <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
+      <p id="data"> <%= post.comments_count %> |Comments | @post.time   </p>
+      <!-- <p id="data"> <%= @post.all[1].comments_count %> |Comments | @post.time   </p> -->
     </div>
   </div>
+  <% end %>
   <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
-  <!-- Begin Post -->
-  <div class="post">
-    <p id="title">TITLE</p>
-    <div id="post_content"></div>
-    <div id="post_data">
-      <p id="data">Points |Comments |12:00pm  </p>
-    </div>
-  </div>
-  <!-- End Post -->
-
 
 <h1>HACKER NEWS </h1>
 <p> Hacker news. Hacker News</p>

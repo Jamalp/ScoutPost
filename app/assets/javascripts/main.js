@@ -1,0 +1,6 @@
+var scout = {
+var card = []
+
+}
+
+
