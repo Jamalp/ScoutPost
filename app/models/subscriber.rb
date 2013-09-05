@@ -1,4 +1,5 @@
 class Subscriber < ActiveRecord::Base
+  has_many :favorites
   has_many :tags, through: :favorites
 
   after_create :send_first_text
