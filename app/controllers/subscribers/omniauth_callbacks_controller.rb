@@ -12,9 +12,9 @@ class Subscribers::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
     else
       session["devise.github_data"] = request.env["omniauth.auth"]
       redirect_to new_subscriber_registration_url
+      # On Oauth registration, send mail from Sendgrid MailMan
+      Mailman.registered_email(@subscriber).deliver
     end
-
   end
-
 
 end

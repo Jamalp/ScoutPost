@@ -14,6 +14,8 @@ class Subscriber < ActiveRecord::Base
                          email: auth.info.email,
                          password: Devise.friendly_token[0,20]
                         )
+      # On Oauth registration, send mail from MailMan
+      Mailman.registered_email(subscriber).deliver
     end
     subscriber
   end
