@@ -16,7 +16,7 @@ class FavoritesController < ApplicationController
 
   def create
     if subscriber_signed_in?
-      @tag = Tag.find_or_create_by(name: (params[:favorite][:tag][:name]))
+      @tag = Tag.find_or_create_by(name: (params[:favorite][:tag][:name].downcase))
       @favorite = Favorite.create(subscriber_id: current_subscriber.id, tag_id: @tag.id, score_threshold: params[:favorite][:score_threshold])
     end
     redirect_to "/favorites"
