@@ -73,7 +73,7 @@ a {
   transition: color 0.1s linear 0s;
 }
 a#title {
-  color: white;
+  color: rgb(168, 211, 211);
   top: 5px;
   z-index: 100;
 }
@@ -219,10 +219,10 @@ li#navlink {
 /*POSTS STYLING*/
 .wrapper > .post {
   position: relative;
-  float: left;
+  /* float: left; */
   width: 55%;
   height: 90px;
-  margin-left: 2.25%;
+  margin-left: 20%;
   margin-right: 2.25%;
   margin-bottom: 5%;
   padding: 0;
