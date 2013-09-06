@@ -351,17 +351,17 @@ a.muted:focus {
   background-color: #16a085;
 }
 .btn.btn-info {
-  background-color: #3498db;
+  background-color: #547388;
 }
 .btn.btn-info:hover,
 .btn.btn-info:focus,
 .btn-group:focus .btn.btn-info.dropdown-toggle {
-  background-color: #5dade2;
+  background-color: #71A0A2;
 }
 .btn.btn-info:active,
 .btn-group.open .btn.btn-info.dropdown-toggle,
 .btn.btn-info.active {
-  background-color: #2c81ba;
+  background-color: #2A3E4B;
 }
 .btn.btn-danger {
   background-color: #e74c3c;
@@ -1284,6 +1284,7 @@ input[type="color"],
   font-family: 'Museo', sans-serif;
   font-size: 14px;
   padding: 8px 5px;
+  margin: 15px 0;
   height: 21px;
   text-indent: 6px;
   -webkit-appearance: none;
@@ -3932,7 +3933,7 @@ input.search-query {
 .badge {
   background-color: #ebedef;
   color: #7b8996;
-  font-size: 13.006px;
+  font-size: 16px;
   line-height: 18.004px;
   font-weight: normal;
   margin-right: 4px;
@@ -4006,8 +4007,6 @@ input.search-query {
   color: #34495e;
   padding: 16px 45px 16px 30px;
   text-shadow: none;
-  background-color: #f9f8f3;
-  border: 2px solid #ebece8;
   font-size: 16px;
   line-height: 1.53875em;
   -webkit-border-radius: 6px;
