@@ -219,10 +219,10 @@ li#navlink {
 /*POSTS STYLING*/
 .wrapper > .post {
   position: relative;
-  float: left;
+  /* float: left; */
   width: 55%;
   height: 90px;
-  margin-left: 2.25%;
+  margin-left: 20%;
   margin-right: 2.25%;
   margin-bottom: 5%;
   padding: 0;

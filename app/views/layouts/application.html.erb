@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<<<<<<< HEAD
 <header>
     <div class="sticky-nav">
         <div id="logo">
@@ -22,18 +21,6 @@
         </nav>
     </div>
 </header>
-=======
-  <div class = "navbar-fix">
-    <ul id = "nav">
-      <li id = "navlink"><%= link_to "Home", root_path %></li>
-      <li id = "navlink"><%= render 'devise/menu/session_items' %></li>
-      <li id = "navlink"><%= render 'devise/menu/registration_items' %></li>
-      <!-- Make this only when user is signed in -->
-      <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
-
-    </ul>
-  </div>
->>>>>>> affb593fff79f65711d1e173280db412b998939b
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 <%= yield %>
