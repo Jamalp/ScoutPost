@@ -12,7 +12,7 @@ namespace :hn_rake do
       # WILL BE BANNED IF ABOVE 5 (300 Hits)
 
       post_data = { title: post.link.title,
-                    # description: post_text,
+             x       # description: post_text,
                     # description: post.link.text,
                     # site: post.link.site,
                     href: post.link.href,
@@ -20,7 +20,7 @@ namespace :hn_rake do
                     # user: post.user.name,
                     comments_count: post.comments_count,
                     hn_post_id: post.id,
-                    submission: post.time
+                    # submission: post.time
                   }
       post = Post.create(post_data)
     end
