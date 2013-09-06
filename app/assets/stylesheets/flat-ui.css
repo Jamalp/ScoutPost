@@ -352,6 +352,7 @@ a.muted:focus {
 }
 .btn.btn-info {
   background-color: #547388;
+  margin-bottom: 3%;
 }
 .btn.btn-info:hover,
 .btn.btn-info:focus,
@@ -1375,7 +1376,6 @@ input[type="color"].placeholder,
     margin: 9px 0;
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
