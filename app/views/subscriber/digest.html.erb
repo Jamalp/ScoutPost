@@ -1,10 +1,11 @@
-  <div class= "post_wrapper">
+
+<div class= "wrapper">
+
 
   <!-- Begin Post -->
   <% @post.each do |post| %>
   <div class="post">
-    <p id="title"><%= post.title %></p>
-    <div id="post_content"><%= %></div>
+    <a id="title"><%= post.title %></a>
     <div id="post_data">
       <p id="data"> <%= post.comments_count %> |Comments | post.time   </p>
       <!-- <p id="data"> <%= @post.all[1].comments_count %> |Comments | @post.time   </p> -->
@@ -12,9 +13,4 @@
   </div>
   <% end %>
   <!-- End Post -->
-
-<h1>HACKER NEWS </h1>
-<p> Hacker news. Hacker News</p>
-<a href="#">Link Link Link</a>
-
 </div>

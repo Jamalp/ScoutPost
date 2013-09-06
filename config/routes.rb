@@ -4,6 +4,7 @@ ScoutPost::Application.routes.draw do
   devise_for :subscribers, :controllers => { :omniauth_callbacks => "subscribers/omniauth_callbacks" }
   get '/about' => 'main#about'
   get '/subscriber/digest' => 'subscriber#digest'
+  get '/subscriber/settings' => 'subscriber#settings'
   resources :favorites
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

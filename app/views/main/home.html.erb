@@ -1,10 +1,8 @@
-<div class= "post_wrapper">
+<div class= "wrapper">
   <div class="main_wrapper">
-    <h1>Welcome</h1>
 
-  <h1>HACKER NEWS </h1>
-  <p> Hacker news. Hacker News</p>
-  <%= link_to "SIGN IN WITH GITHUB", subscriber_omniauth_authorize_path(:github) %>
-  <%= link_to('Logout', destroy_subscriber_session_path, :method => :delete) %>
+  <h1>ScoutPost</h1>
+  <p>It looks like you've found us...</p>
+  <%= link_to image_tag("g.png", :width => 100, :id => 'oauth'), subscriber_omniauth_authorize_path(:github) %>
   </div>
 </div>
