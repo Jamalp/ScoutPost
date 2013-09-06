@@ -1,4 +1,4 @@
-<div class= "post_wrapper">
+  <div class= "post_wrapper">
 
   <!-- Begin Post -->
   <% @post.each do |post| %>
@@ -6,7 +6,7 @@
     <p id="title"><%= post.title %></p>
     <div id="post_content"><%= %></div>
     <div id="post_data">
-      <p id="data"> <%= post.comments_count %> |Comments | @post.time   </p>
+      <p id="data"> <%= post.comments_count %> |Comments | post.time   </p>
       <!-- <p id="data"> <%= @post.all[1].comments_count %> |Comments | @post.time   </p> -->
     </div>
   </div>
