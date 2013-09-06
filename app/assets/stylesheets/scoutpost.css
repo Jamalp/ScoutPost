@@ -73,7 +73,7 @@ a {
   transition: color 0.1s linear 0s;
 }
 a#title {
-  color: white;
+  color: rgb(168, 211, 211);
   top: 5px;
   z-index: 100;
 }

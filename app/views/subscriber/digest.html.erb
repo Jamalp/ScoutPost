@@ -1,11 +1,13 @@
+
 <div class= "wrapper">
+
 
   <!-- Begin Post -->
   <% @post.each do |post| %>
   <div class="post">
     <a id="title"><%= post.title %></a>
     <div id="post_data">
-      <p id="data"> <%= post.comments_count %> |Comments | @post.time   </p>
+      <p id="data">Score: <%= post.score %> | Comments: <%= post.comments_count %> </p>
       <!-- <p id="data"> <%= @post.all[1].comments_count %> |Comments | @post.time   </p> -->
     </div>
   </div>
