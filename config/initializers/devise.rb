@@ -9,9 +9,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "TeamScoutPost@gmail.com"
 
-  # Configure the class responsible to send e-mails.
-  # config.mailer = "Devise::Mailer"
-
+  config.secret_key = ENV['DEVISE_SECRET']
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
