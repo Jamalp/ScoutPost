@@ -18,5 +18,4 @@ class ApplicationController < ActionController::Base
 
   def redirect_sign_in_subscriber
   end
-
 end

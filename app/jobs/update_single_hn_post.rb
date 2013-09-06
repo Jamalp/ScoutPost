@@ -13,5 +13,6 @@ class UpdateSinglePost
     post.score = updated_entry.voting.score
     post.save
     puts "Prior Score: #{old_score}, New Score: #{post.score}"
+    Resque.enqueue(CheckSubscriberPost, post.id)
   end
 end

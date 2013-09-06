@@ -15,4 +15,3 @@ class SendSms
     )
   end
 end
-
