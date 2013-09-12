@@ -7,7 +7,7 @@ namespace :hn_rake do
   task posts: :environment do
     # Query hackernews with entry.all
     # store each returned entry as a post
-    Entry.all(1).each do |post|
+    Entry.all(2).each do |post|
       # BE CAREFUL ABOUT THE PARAMETERS. KEEP BELOW 3
       # WILL BE BANNED IF ABOVE 5 (300 Hits)
 

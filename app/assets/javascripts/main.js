@@ -1,6 +1,0 @@
-var scout = {
-var card = []
-
-}
-
-

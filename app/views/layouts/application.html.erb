@@ -7,20 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class = "navbar-fix">
-    <ul id = "nav">
-      <li id = "navlink"><%= link_to "Home", root_path %></li>
-      <li id = "navlink"><%= render 'devise/menu/session_items' %></li>
-      <li id = "navlink"><%= render 'devise/menu/registration_items' %></li>
-      <!-- Make this only when user is signed in -->
-      <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
-      <li id = "navlink"><%= link_to "Favorites", favorites_path %></li>
 
-    </ul>
-  </div>
+<header>
+    <div class="sticky-nav">
+        <div id="logo">
+          <li id="logo"><%= link_to "SCOUTPOST", root_path %></li>
+        </div>
+        <nav id="menu">
+          <ul id="menu-nav">
+            <li id = "navlink"><%= render 'devise/menu/session_items' %></li>
+            <li id = "navlink"><%= render 'devise/menu/registration_items' %></li>
+            <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
+            <li id = "navlink"><%= link_to "Favorites", favorites_path %></li>
+            </ul>
+        </nav>
+    </div>
+</header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
 <%= yield %>
 
 

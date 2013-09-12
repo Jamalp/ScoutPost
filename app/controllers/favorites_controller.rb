@@ -1,5 +1,6 @@
 class FavoritesController < ApplicationController
   before_filter :authenticate_subscriber!
+
   def index
     if subscriber_signed_in?
       # binding.pry
