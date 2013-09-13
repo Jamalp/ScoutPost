@@ -14,7 +14,7 @@ class Mailman < ActionMailer::Base
   end
 
   def digest_email(subscriber)
-
+    # Daily email populated with each Subscribers tags (through Favorites) which reached the score threshold
   end
 
 end

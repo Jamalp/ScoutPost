@@ -8,8 +8,7 @@ class Subscriber < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable,
          :lockable, :omniauthable, :omniauth_providers => [:github]
-
-  private
+private
 
   def send_first_text
       # Instantiate a Twilio client
