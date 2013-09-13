@@ -8,6 +8,7 @@ class TagSinglePost
       posts.each do |post|
         begin
         post.tags << tag
+        Resque.enqueue(CheckSubscriberPost, post.id)
         rescue ActiveRecord::RecordNotUnique
         end
       end
