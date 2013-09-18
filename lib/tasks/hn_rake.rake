@@ -12,7 +12,6 @@ namespace :hn_rake do
       # WILL BE BANNED IF ABOVE 5 (300 Hits)
 
       post_data = { title: post.link.title,
-             x       # description: post_text,
                     # description: post.link.text,
                     # site: post.link.site,
                     href: post.link.href,
