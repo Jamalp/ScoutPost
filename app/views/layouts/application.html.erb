@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ScoutPost</title>
+  <title>HN</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<header>
+    <div class="sticky-nav">
+        <div id="logo">
+          <li id="logo"><%= link_to "SCOUTPOST", root_path %></li>
+        </div>
+        <nav id="menu">
+          <ul id="menu-nav">
+            <li id = "navlink"><%= render 'devise/menu/session_items' %></li>
+            <li id = "navlink"><%= render 'devise/menu/registration_items' %></li>
+            <li id = "navlink"><a href="/subscriber/digest">Digest</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 <%= yield %>
+
 
 </body>
 </html>

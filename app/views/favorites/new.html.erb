@@ -1,0 +1,13 @@
+<h3>Add a favorite</h3>
+
+<%= form_for @favorite do |f| %>
+  <%= f.fields_for @tag do |t| %>
+    <%= t.label :name %>:
+    <%= t.text_field :name %><br/>
+  <% end %>
+  <%= f.label :score_threshold %>
+  <%= f.number_field :score_threshold %><br/>
+  <%= f.submit "Add" %>
+<% end %>
+
+<%= link_to("Back to favorites", "/favorites")%>
